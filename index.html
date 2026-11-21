@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B1118">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Figtree:wght@300..800&display=swap" rel="stylesheet">
 <style>
 /* VOICE: urgent but calm, a field report from the scene
    IDEA: a green emergency banner, then a photo pinned beside the typed account
@@ -142,7 +142,7 @@ body{background:#fff}
 .z h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
 .z p{font-family:"JetBrains Mono",monospace;font-size:14px;line-height:1.7;color:var(--soft);margin-top:4px}
 .loop{margin-top:clamp(56px,8vw,90px);padding:clamp(32px,5vw,52px);border-radius:16px;background:radial-gradient(60% 120% at 100% 0%,rgba(127,224,180,.35),rgba(127,224,180,0) 60%),linear-gradient(110deg,#0B5A3C,#1E9461);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.loop h2{color:#fff!important;margin:0;font-size:clamp(26px,3vw,36px);font-weight:400}
+.loop h2{color:#fff!important;margin:0;max-width:640px;font-size:clamp(26px,3vw,36px);font-weight:400}
 .loop h2 span{font-weight:800}
 .loop-btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;background:#fff;color:#0B5A3C;font-weight:700;font-size:16px;text-decoration:none;transition:transform .2s}
 .loop-btn:hover,.loop-btn:focus-visible{transform:translateY(-2px);outline:2px solid #fff;outline-offset:3px}
@@ -152,6 +152,15 @@ body{background:#fff}
 .lt-mark svg{width:40px;height:auto;fill:var(--ink);display:block}
 .lt-mark b{display:flex;gap:2px;height:4px}.lt-mark b i{flex:1;background:#1E9461}.lt-mark b i:nth-child(2){background:#27AE74}.lt-mark b i:nth-child(3){background:#3CC489}.lt-mark b i:nth-child(4){background:#7FE0B4}
 .lt-mark+.drone{padding-top:clamp(20px,3vw,32px)!important}
+/* type: Figtree (rounded, friendly, health-sector feel) for everything except the Tambora wordmark */
+body,.mono p,.phase p,.spec p,.z p,.card figcaption,.phase .punch{font-family:"Figtree","Helvetica Neue",Arial,sans-serif!important}
+.brand span{font-family:Inter,"Helvetica Neue",Arial,sans-serif}
+.mono p,.phase p{font-size:17px;line-height:1.7}
+.spec p,.z p{font-size:15.5px;line-height:1.6}
+h1,h2,h3,.lead,.visit,.loop h2{letter-spacing:-.02em}
+h2{font-weight:700}
+.banner h1 .b{font-weight:700}
+.card figcaption{font-weight:600;font-size:15px}
 </style>
 </head>
 <body>
@@ -239,8 +248,13 @@ body{background:#fff}
   </div>
  </section>
 
+ <figure class="scene">
+  <img src="scene2.jpg" alt="Paramedics treating a person lying on the road beside an ambulance" width="1732" height="908" loading="lazy">
+  <figcaption>The right help, the first time, for every person on the road.</figcaption>
+ </figure>
+
  <section class="loop">
-  <h2>Stay in the loop with <span>the medical branch.</span></h2>
+  <h2>Keep up to date with our plans to <span>speed up emergency medical care.</span></h2>
   <a class="loop-btn" href="https://flytambora.com/#invite">Join the community <span aria-hidden="true">→</span></a>
  </section>
 
