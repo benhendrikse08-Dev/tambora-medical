@@ -161,6 +161,18 @@ h1,h2,h3,.lead,.visit,.loop h2{letter-spacing:-.02em}
 h2{font-weight:700}
 .banner h1 .b{font-weight:700}
 .card figcaption{font-weight:600;font-size:15px}
+.dview{margin:clamp(28px,4vw,40px) 0 0}
+.dv-wrap{position:relative;border-radius:14px;overflow:hidden;background:#111}
+.dv-wrap img{display:block;width:100%;height:auto}
+.dv-alert{position:absolute;left:16px;top:16px;display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:rgba(11,17,24,.82);backdrop-filter:blur(6px);color:#fff;font-size:14px}
+.dv-alert i{width:10px;height:10px;border-radius:50%;background:#E5484D;box-shadow:0 0 0 0 rgba(229,72,77,.7);animation:dvp 1.6s infinite}
+@keyframes dvp{70%{box-shadow:0 0 0 10px rgba(229,72,77,0)}100%{box-shadow:0 0 0 0 rgba(229,72,77,0)}}
+.dv-alert b{font-weight:700;letter-spacing:.02em;text-transform:uppercase;font-size:13px}
+.dv-alert span{color:rgba(255,255,255,.75)}
+.dv-tag{position:absolute;right:14px;bottom:12px;font-size:12px;font-weight:600;color:#fff;background:rgba(11,17,24,.7);padding:5px 11px;border-radius:999px;letter-spacing:.02em}
+.dview figcaption{margin-top:16px;font-size:clamp(18px,1.8vw,22px);font-weight:600;letter-spacing:-.01em;color:var(--ink);padding-left:14px;border-left:3px solid var(--green-hi)}
+@media(max-width:600px){.dv-alert{left:10px;top:10px;padding:7px 12px;font-size:12px}.dv-alert span{display:none}}
+@media (prefers-reduced-motion:reduce){.dv-alert i{animation:none}}
 </style>
 </head>
 <body>
@@ -207,6 +219,14 @@ h2{font-weight:700}
    <div><div class="kick">The drone</div><h2>Built to get there first.</h2></div>
    <div class="mono"><p>Every Tambora drone is designed and built by us in South Africa, and flown by TamboraAI, the brain that lets it fly itself and understand what's happening on the ground. It doesn't wait to be called out. It's already in the air.</p></div>
   </div>
+  <figure class="dview">
+   <div class="dv-wrap">
+    <img src="droneview.jpg" alt="Aerial view of a highway with every vehicle outlined by detection boxes; two crashed cars are marked in red" width="1672" height="941" loading="lazy">
+    <div class="dv-alert"><i></i><b>Crash detected</b><span>Alerting emergency response · 00:03</span></div>
+    <span class="dv-tag">Rendered example</span>
+   </div>
+   <figcaption>What our drone sees: a crash spotted, and help alerted, in seconds.</figcaption>
+  </figure>
   <div class="specs">
    <div class="spec"><div class="n">Always on</div><h3>Patrols 24/7</h3><p>Flies its stretch of highway day and night. When its battery runs low, it lands on a rooftop dock that swaps the battery automatically and sends it straight back up.</p></div>
    <div class="spec"><div class="n">Sees</div><h3>Eyes that never blink</h3><p>Reads the road below in real time, lane by lane. It knows what normal traffic looks like, so a crash stands out the instant it happens. Vehicles and people not involved are blurred.</p></div>
@@ -255,7 +275,7 @@ h2{font-weight:700}
 
  <section class="loop">
   <h2>Keep up to date with our plans to <span>speed up emergency medical care.</span></h2>
-  <a class="loop-btn" href="https://flytambora.com/#invite">Join the community <span aria-hidden="true">→</span></a>
+  <a class="loop-btn" href="https://flytambora.com/#join">Join the community <span aria-hidden="true">→</span></a>
  </section>
 
  <footer class="end">
