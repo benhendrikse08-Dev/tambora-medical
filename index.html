@@ -67,7 +67,7 @@ a{color:inherit}
 .lead{font-size:clamp(20px,2.2vw,25px);line-height:1.5;text-wrap:pretty}
 .lead2{font-size:17px;line-height:1.75;color:var(--soft);margin-top:20px;max-width:60ch}
 .lead strong{color:var(--green-hi);font-weight:700}
-.intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(36px,6vw,72px);margin-top:clamp(44px,6vw,68px);align-items:center}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,72px);margin-top:clamp(20px,3vw,32px);align-items:center}
 .card{background:radial-gradient(75% 70% at 100% 100%,rgba(36,87,166,.75),rgba(36,87,166,0) 70%),radial-gradient(50% 45% at 0% 0%,rgba(127,224,180,.25),rgba(127,224,180,0) 70%),var(--green);padding:clamp(16px,2.2vw,26px) clamp(16px,2.2vw,26px) 20px;border-radius:4px;box-shadow:0 30px 60px rgba(0,0,0,.5);transform:rotate(-1.2deg);animation:settle 1s cubic-bezier(.2,.7,.2,1) both}
 .card img{display:block;width:100%;height:auto;aspect-ratio:4/3.4;object-fit:cover;background:#13202a}
 .card figcaption{font-family:"JetBrains Mono",monospace;font-size:14px;font-weight:700;margin-top:16px}
@@ -173,27 +173,40 @@ h2{font-weight:700}
 .dview figcaption{margin-top:16px;font-size:clamp(18px,1.8vw,22px);font-weight:600;letter-spacing:-.01em;color:var(--ink);padding-left:14px;border-left:3px solid var(--green-hi)}
 @media(max-width:600px){.dv-alert{left:10px;top:10px;padding:7px 12px;font-size:12px}.dv-alert span{display:none}}
 @media (prefers-reduced-motion:reduce){.dv-alert i{animation:none}}
+.fhero{position:relative;min-height:min(92vh,820px);display:flex;flex-direction:column;color:#fff;background:#062A1D url(hero.jpg) 80% 40%/cover no-repeat;overflow:hidden}
+.fhero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,30,21,.94) 0%,rgba(6,42,29,.78) 36%,rgba(11,90,60,.25) 68%,rgba(11,90,60,0) 100%),linear-gradient(0deg,rgba(5,30,21,.75) 0%,rgba(5,30,21,0) 40%),radial-gradient(50% 70% at 100% 0%,rgba(242,214,160,.25),transparent 70%)}
+.fw{position:relative;z-index:2;width:100%;max-width:1200px;margin-left:auto;margin-right:auto;padding-left:max(5vw,20px);padding-right:max(5vw,20px)}
+.ftop{display:flex;justify-content:space-between;align-items:center;padding-top:clamp(20px,3vw,32px)}
+.fin{margin-top:auto;margin-bottom:auto;padding-top:clamp(48px,8vw,96px);padding-bottom:clamp(48px,8vw,96px)}
+.fk{font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#7FE0B4}
+.fhero h1{font-size:clamp(52px,7.4vw,98px);line-height:.98;letter-spacing:-.035em;font-weight:300;margin:16px 0 22px;max-width:10em}
+.fhero h1 span{font-weight:800;color:#fff;background:linear-gradient(90deg,#7FE0B4,#3CC489);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fhero p{font-size:clamp(17px,1.6vw,20px);max-width:38ch;color:rgba(255,255,255,.9);line-height:1.55}
+.fbtn{display:inline-flex;align-items:center;gap:10px;margin-top:30px;min-height:52px;padding:0 28px;border-radius:999px;background:#fff;color:#0B5A3C;font-weight:700;font-size:16px;text-decoration:none}
+.page{padding-top:clamp(40px,6vw,64px)!important}
+.plain{margin:0}
+.plain img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:40% center;border-radius:12px}
+.plain figcaption{margin-top:14px;font-size:15px;font-weight:600;color:rgba(255,255,255,.85);padding-left:12px;border-left:3px solid #3CC489}
 </style>
 </head>
-<body>
-<div class="dark">
-<main class="page">
- <header class="top">
+<body style="background:#0B1118">
+<header class="fhero">
+ <div class="fw ftop">
   <a class="brand" href="https://flytambora.com" aria-label="Tambora">
    <span class="tm"><svg viewBox="22 34 156 142" aria-hidden="true"><path d="M22 34H93V176H67V62H22Z M107 34H178V62H133V176H107Z"/></svg><b><i></i><i></i><i></i><i></i></b></span>
    <span>Tambora <strong>Medical</strong></span>
   </a>
   <a class="pw" href="https://flytambora.com">Powered by <b>FlyTambora.com</b></a>
- </header>
-
- <section class="banner" aria-label="Tambora Medical">
-  <div class="photo" role="img" aria-label="A paramedic in a hi-vis jacket reviewing notes on a clipboard"></div><div class="shade" aria-hidden="true"></div><div class="frame" aria-hidden="true"></div>
-  <svg class="bigT" viewBox="20 32 160 146" aria-hidden="true"><path d="M22 34H93V176H67V62H22Z M107 34H178V62H133V176H107Z"/></svg>
-  <div class="txt">
-   <h1><span class="l">Every life deserves</span><span class="b">help, faster.</span></h1>
-   <p class="sub">Autonomous drones on the front line of emergency medical care.</p>
-  </div>
- </section>
+ </div>
+ <div class="fw fin">
+  <span class="fk">Emergency medical response</span>
+  <h1>Every life deserves<br><span>help, faster.</span></h1>
+  <p>Autonomous drones on the front line of emergency medical care: spotting emergencies the moment they happen and getting the right help moving.</p>
+  <a class="fbtn" href="#how">See how it works <span aria-hidden="true">↓</span></a>
+ </div>
+</header>
+<div class="dark">
+<main class="page">
 
  <section class="intro">
   <div class="leadwrap">
@@ -201,8 +214,8 @@ h2{font-weight:700}
    <p class="lead2">It starts on the highway. When our drones spot a crash and someone is in danger, the nearest emergency response teams get an alert, the video and a live feed, so they know what they're facing before they leave. We're also in conversation with insurers who want clear eyes on the road for their claims, and to support this medical mission.</p>
   </div>
   <div>
-   <figure class="card">
-    <img src="medical-hero.jpg" alt="Paramedics rushing a patient on a stretcher away from a crash on a highway at dusk" width="1608" height="978">
+   <figure class="plain">
+    <img src="roadside.jpg" alt="A paramedic with a medical bag watching a crash scene on a highway at sunset" width="1671" height="941">
     <figcaption>Every minute after a crash counts.</figcaption>
    </figure>
    <p class="where">Gauteng &amp; Western Cape · live end of October 2027</p>
@@ -214,7 +227,7 @@ h2{font-weight:700}
 <div class="light">
 <main class="page lp">
  <div class="lt-mark" aria-hidden="true"><svg viewBox="22 34 156 142"><path d="M22 34H93V176H67V62H22Z M107 34H178V62H133V176H107Z"/></svg><b><i></i><i></i><i></i><i></i></b></div>
- <section class="drone">
+ <section class="drone" id="how">
   <div class="head">
    <div><div class="kick">The drone</div><h2>Built to get there first.</h2></div>
    <div class="mono"><p>Every Tambora drone is designed and built by us in South Africa, and flown by TamboraAI, the brain that lets it fly itself and understand what's happening on the ground. It doesn't wait to be called out. It's already in the air.</p></div>
