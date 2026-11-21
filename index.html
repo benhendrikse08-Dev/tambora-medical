@@ -116,9 +116,46 @@ h2{font-size:clamp(28px,3.2vw,38px);line-height:1.08;letter-spacing:-.015em;font
  .banner .txt{margin-left:0;padding:36px 32px 44px}
  .bigT{height:44px;right:22px;bottom:22px}
 }
+/* light lower half: white from the full-width line down */
+body{background:#fff}
+.dark{background:var(--bg);color:var(--ink)}
+.light{background:#fff;border-top:1px solid #D4CFC7;color-scheme:light;
+ --ink:#0B1118;--soft:#2E3135;--mute:#6E6A64;--rule:#E2DED8;--green-hi:#178553;color:var(--ink)}
+.page:not(.lp){padding-bottom:clamp(40px,6vw,72px)}
+.lp{padding-top:0}
+.light .drone{margin-top:0;border-top:0;padding-top:clamp(44px,6vw,72px)}
+.light .specs{background:#E7E3DD;border-color:#E7E3DD}
+.light .spec{background:#fff}
+.light .spec h3,.light h2{color:var(--ink)}
+.light .phase .punch{color:var(--ink)}
+.light .visit{color:var(--ink)}
+.light .mail a{color:var(--ink)}
+.light .foot{color:#9A958E}
+.scene{margin:clamp(56px,8vw,90px) 0 0}
+.scene img{border-radius:14px;display:block;width:100%;height:clamp(240px,38vw,460px);object-fit:cover;object-position:center 55%}
+.scene figcaption{margin-top:16px;font-size:clamp(18px,1.8vw,22px);font-weight:600;letter-spacing:-.01em;color:var(--ink);padding-left:14px;border-left:3px solid var(--green-hi)}
+.zones{margin-top:clamp(56px,8vw,90px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(28px,5vw,64px);align-items:start}
+.zones h2{margin-bottom:0}
+.zl{display:grid;gap:0;border-top:1px solid var(--rule)}
+.z{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.zn{grid-row:span 2;font-size:13px;font-weight:700;color:var(--green-hi);padding-top:4px}
+.z h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
+.z p{font-family:"JetBrains Mono",monospace;font-size:14px;line-height:1.7;color:var(--soft);margin-top:4px}
+.loop{margin-top:clamp(56px,8vw,90px);padding:clamp(32px,5vw,52px);border-radius:16px;background:radial-gradient(60% 120% at 100% 0%,rgba(127,224,180,.35),rgba(127,224,180,0) 60%),linear-gradient(110deg,#0B5A3C,#1E9461);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.loop h2{color:#fff!important;margin:0;font-size:clamp(26px,3vw,36px);font-weight:400}
+.loop h2 span{font-weight:800}
+.loop-btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;background:#fff;color:#0B5A3C;font-weight:700;font-size:16px;text-decoration:none;transition:transform .2s}
+.loop-btn:hover,.loop-btn:focus-visible{transform:translateY(-2px);outline:2px solid #fff;outline-offset:3px}
+.light .end{margin-top:clamp(40px,6vw,64px)}
+@media(max-width:860px){.zones{grid-template-columns:minmax(0,1fr)}}
+.lt-mark{display:inline-flex;flex-direction:column;gap:5px;width:40px;margin-top:clamp(36px,5vw,56px)}
+.lt-mark svg{width:40px;height:auto;fill:var(--ink);display:block}
+.lt-mark b{display:flex;gap:2px;height:4px}.lt-mark b i{flex:1;background:#1E9461}.lt-mark b i:nth-child(2){background:#27AE74}.lt-mark b i:nth-child(3){background:#3CC489}.lt-mark b i:nth-child(4){background:#7FE0B4}
+.lt-mark+.drone{padding-top:clamp(20px,3vw,32px)!important}
 </style>
 </head>
 <body>
+<div class="dark">
 <main class="page">
  <header class="top">
   <a class="brand" href="https://flytambora.com" aria-label="Tambora">
@@ -151,6 +188,11 @@ h2{font-size:clamp(28px,3.2vw,38px);line-height:1.08;letter-spacing:-.015em;font
   </div>
  </section>
 
+ </main>
+</div>
+<div class="light">
+<main class="page lp">
+ <div class="lt-mark" aria-hidden="true"><svg viewBox="22 34 156 142"><path d="M22 34H93V176H67V62H22Z M107 34H178V62H133V176H107Z"/></svg><b><i></i><i></i><i></i><i></i></b></div>
  <section class="drone">
   <div class="head">
    <div><div class="kick">The drone</div><h2>Built to get there first.</h2></div>
@@ -165,6 +207,20 @@ h2{font-size:clamp(28px,3.2vw,38px);line-height:1.08;letter-spacing:-.015em;font
    <div class="spec"><div class="n">Learns</div><h3>Smarter every flight</h3><p>What one drone learns today, every drone knows tomorrow. Each patrol teaches TamboraAI more about South African roads.</p></div>
   </div>
  </section>
+
+ <section class="zones">
+  <div class="zh"><div class="kick">Pilot zones · 2027</div><h2>Where we start flying.</h2></div>
+  <div class="zl">
+   <div class="z"><span class="zn">01</span><h3>N1 Johannesburg – Pretoria</h3><p>The country's busiest stretch of highway, carrying hundreds of thousands of vehicles a day between the two cities.</p></div>
+   <div class="z"><span class="zn">02</span><h3>N2 Cape Town</h3><p>From the city past the airport towards Somerset West: a high-traffic route with a history of serious crashes.</p></div>
+   <div class="z"><span class="zn">03</span><h3>Cape Town metro</h3><p>The N1 and the city's main routes, where congestion slows emergency response the most.</p></div>
+  </div>
+ </section>
+
+ <figure class="scene">
+  <img src="scene.jpg" alt="Paramedics loading a patient into an ambulance at the scene of a road accident" width="1536" height="1024" loading="lazy">
+  <figcaption>When help gets there sooner, more lives are saved.</figcaption>
+ </figure>
 
  <section class="phases">
   <div class="phase">
@@ -183,11 +239,16 @@ h2{font-size:clamp(28px,3.2vw,38px);line-height:1.08;letter-spacing:-.015em;font
   </div>
  </section>
 
- <footer class="end" id="contact">
+ <section class="loop">
+  <h2>Stay in the loop with <span>the medical branch.</span></h2>
+  <a class="loop-btn" href="https://flytambora.com/#invite">Join the community <span aria-hidden="true">→</span></a>
+ </section>
+
+ <footer class="end">
   <a class="visit" href="https://flytambora.com">Visit <span>FlyTambora.com</span> <i>→</i></a>
-  <p class="mail">Or get in touch: <a href="mailto:ben@flytambora.com">ben@flytambora.com</a></p>
  </footer>
  <p class="foot">© 2026 Tambora Technologies (Pty) Ltd · South Africa</p>
 </main>
+</div>
 </body>
 </html>
